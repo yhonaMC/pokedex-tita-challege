@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #DC0A2D;
+  --color-bug: #A7B723;
+  --color-dark: #75574C;
+  --color-dragon: #7037FF;
+  --color-electric: #F9CF30;
+  --color-fairy: #E69EAC;
+  --color-fighting: #C12239;
+  --color-fire: #F57D31;
+  --color-flying: #A891EC;
+  --color-ghost: #70559B;
+  --color-normal: #AAA67F;
+  --color-grass: #74CB48;
+  --color-ground: #DEC16B;
+  --color-ice: #9AD6DF;
+  --color-poison: #A43E9E;
+  --color-psychic: #FB5584;
+  --color-rock: #B69E31;
+  --color-steel: #B7B9D0;
+  --color-water: #6493EB;
+  --color-dark-gray: #212121;
+  --color-medium-gray: #666666;
+  --color-light-gray: #E0E0E0;
+  --color-background: #EFEFEF;
+  --color-white: #FFFFFF;
+  --font-family: 'Poppins', sans-serif;
+  --font-size-headline: 24px;
+  --line-height-headline: 32px;
+  
+  --font-size-subtitle-1: 14px;
+  --line-height-subtitle-1: 16px;
+  
+  --font-size-subtitle-2: 12px;
+  --line-height-subtitle-2: 16px;
+  
+  --font-size-subtitle-3: 10px;
+  --line-height-subtitle-3: 16px;
+  
+  --font-size-body-1: 14px;
+  --line-height-body-1: 16px;
+  
+  --font-size-body-2: 12px;
+  --line-height-body-2: 16px;
+  
+  --font-size-body-3: 10px;
+  --line-height-body-3: 16px;
+  
+  --font-size-caption: 8px;
+  --line-height-caption: 12px;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 32px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-dark-gray);
+  background-color: var(--color-background);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.headline {
+  font-size: var(--font-size-headline);
+  line-height: var(--line-height-headline);
+  font-weight: var(--font-weight-bold);
+}
+
+.subtitle-1 {
+  font-size: var(--font-size-subtitle-1);
+  line-height: var(--line-height-subtitle-1);
+  font-weight: var(--font-weight-bold);
+}
+
+.subtitle-2 {
+  font-size: var(--font-size-subtitle-2);
+  line-height: var(--line-height-subtitle-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.subtitle-3 {
+  font-size: var(--font-size-subtitle-3);
+  line-height: var(--line-height-subtitle-3);
+  font-weight: var(--font-weight-bold);
+}
+
+.body-1 {
+  font-size: var(--font-size-body-1);
+  line-height: var(--line-height-body-1);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-2 {
+  font-size: var(--font-size-body-2);
+  line-height: var(--line-height-body-2);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-3 {
+  font-size: var(--font-size-body-3);
+  line-height: var(--line-height-body-3);
+  font-weight: var(--font-weight-regular);
+}
+
+.caption {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  font-weight: var(--font-weight-regular);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}

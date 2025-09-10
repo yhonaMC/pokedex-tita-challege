@@ -1,0 +1,112 @@
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-md) 0;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.header__back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.header__back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__back-button:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header__title-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.header__title {
+  font-size: var(--font-size-headline);
+  line-height: var(--line-height-headline);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.header__controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.header__search {
+  flex: 1;
+  max-width: 400px;
+}
+
+.header__filters {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .header__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .header__logo {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .header__controls {
+    padding-top: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+  }
+}

@@ -1,0 +1,51 @@
+.detail-page {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.detail-page__header {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .detail-page {
+    background-image: url('/src/assets/Pokeball (1).svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 200px 200px;
+    background-attachment: fixed;
+  }
+}
+
+.detail-page__loading,
+.detail-page__error,
+.detail-page__not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  text-align: center;
+  min-height: 60vh;
+}
+
+.detail-page__loading-text,
+.detail-page__error-text,
+.detail-page__not-found-text {
+  font-size: var(--font-size-body-1);
+  line-height: var(--line-height-body-1);
+  color: var(--color-medium-gray);
+}
+
+.detail-page__error-text {
+  color: var(--color-primary);
+}
+
+.detail-page__loading-silhouette {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  opacity: 0.3;
+  margin-bottom: var(--spacing-lg);
+}
