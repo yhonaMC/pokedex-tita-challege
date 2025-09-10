@@ -48,15 +48,6 @@ export const HomePage = ({ onPokemonClick }: HomePageProps) => {
     if (data?.pokemon_v2_pokemon) {
       const transformedPokemon = data.pokemon_v2_pokemon.map(
         (pokemon: GraphQLPokemon) => {
-          const spritesData = pokemon.pokemon_v2_pokemonsprites[0]?.sprites
-          let sprites: Record<string, string> = {}
-
-          try {
-            sprites = JSON.parse(spritesData || '{}')
-          } catch {
-            sprites = {} as Record<string, string>
-          }
-
           const githubImageUrl = getPokemonImageUrl(pokemon.id)
 
           return {
@@ -110,12 +101,9 @@ export const HomePage = ({ onPokemonClick }: HomePageProps) => {
     [dispatch]
   )
 
-  const handleClearTypeFilter = useCallback(
-    () => {
-      dispatch(setFilters({ type: '' }))
-    },
-    [dispatch]
-  )
+  const handleClearTypeFilter = useCallback(() => {
+    dispatch(setFilters({ type: '' }))
+  }, [dispatch])
 
   return (
     <div className="home-page">

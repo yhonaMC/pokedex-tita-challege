@@ -1,4 +1,3 @@
-import { Icon } from '../../atoms/Icon'
 import { SearchBar } from '../../molecules/SearchBar'
 import { SortDropdown, type SortOption } from '../../molecules/SortDropdown'
 import { FilterDropdown } from '../../molecules/FilterDropdown'

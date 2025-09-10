@@ -117,7 +117,10 @@ function applyFilters(state: PokemonState) {
 const validatePokemonData = (
   pokemon: Pokemon
 ): { isValid: boolean; errors: Record<string, string> } => {
-  return validateData(pokemon, pokemonDataValidationSchema)
+  return validateData(
+    pokemon as unknown as Record<string, unknown>,
+    pokemonDataValidationSchema
+  )
 }
 
 export const {
