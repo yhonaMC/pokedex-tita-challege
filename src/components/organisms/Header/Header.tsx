@@ -42,17 +42,22 @@ export const Header = ({
                 className="header__back-button"
                 aria-label="Go back"
               >
-                <img src="/src/assets/Vector.svg" alt="Back" width="24" height="24" />
+                <img
+                  src="/src/assets/Vector.svg"
+                  alt="Back"
+                  width="24"
+                  height="24"
+                />
               </button>
             )}
 
             <div className="header__title-container">
               <div className="header__logo">
-                <img 
-                  src="/src/assets/pokeball.svg" 
-                  alt="Pokeball" 
-                  width="24" 
-                  height="24" 
+                <img
+                  src="/src/assets/pokeball.svg"
+                  alt="Pokeball"
+                  width="24"
+                  height="24"
                   style={{ filter: 'brightness(0) invert(1)' }}
                 />
               </div>
@@ -62,26 +67,23 @@ export const Header = ({
 
           {rightContent && <div className="header__right">{rightContent}</div>}
         </div>
-        
+
         {showControls && (
           <div className="header__controls">
             <div className="header__search">
-              <SearchBar
-                placeholder="Search Pokemon..."
-                onSearch={onSearch}
-              />
+              <SearchBar placeholder="Search Pokemon..." onSearch={onSearch} />
             </div>
-            
+
             <div className="header__filters">
               <FilterDropdown
                 selectedType={selectedType}
                 onTypeSelect={onTypeFilter}
                 onClear={onClearTypeFilter}
               />
-              
+
               <SortDropdown
-                value={sortValue}
-                onChange={onSort}
+                selectedSort={sortValue || 'number'}
+                onSortSelect={onSort}
               />
             </div>
           </div>
