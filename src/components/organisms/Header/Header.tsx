@@ -42,7 +42,7 @@ export const Header = ({
                 aria-label="Go back"
               >
                 <img
-                  src="/src/assets/Vector.svg"
+                  src="/assets/Vector.svg"
                   alt="Back"
                   width="24"
                   height="24"
@@ -53,7 +53,7 @@ export const Header = ({
             <div className="header__title-container">
               <div className="header__logo">
                 <img
-                  src="/src/assets/pokeball.svg"
+                  src="/assets/pokeball.svg"
                   alt="Pokeball"
                   width="24"
                   height="24"

@@ -48,7 +48,7 @@ export const PokemonDetail = ({
                 aria-label="Go back"
               >
                 <img
-                  src="/src/assets/Vector.svg"
+                  src="/assets/Vector.svg"
                   alt="Back"
                   width="24"
                   height="24"
@@ -106,7 +106,7 @@ export const PokemonDetail = ({
               <div className="pokemon-detail__stat-item">
                 <div className="pokemon-detail__stat-icon">
                   <img
-                    src="/src/assets/weight.svg"
+                    src="/assets/weight.svg"
                     alt="Weight"
                     width="20"
                     height="20"
@@ -123,7 +123,7 @@ export const PokemonDetail = ({
               <div className="pokemon-detail__stat-item">
                 <div className="pokemon-detail__stat-icon">
                   <img
-                    src="/src/assets/straighten.svg"
+                    src="/assets/straighten.svg"
                     alt="Height"
                     width="20"
                     height="20"

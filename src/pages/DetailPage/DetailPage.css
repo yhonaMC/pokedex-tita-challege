@@ -10,7 +10,7 @@
 
 @media (max-width: 767px) {
   .detail-page {
-    background-image: url('/src/assets/Pokeball (1).svg');
+    background-image: url('/assets/Pokeball (1).svg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 200px 200px;

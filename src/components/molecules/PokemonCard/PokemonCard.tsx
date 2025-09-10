@@ -76,7 +76,7 @@ export const PokemonCard = memo(({
         {imageLoading && (
           <div className="pokemon-card__image-placeholder">
             <img 
-              src="/src/assets/Silhouette.svg" 
+              src="/assets/Silhouette.svg" 
               alt="Loading..." 
               className="pokemon-card__silhouette" 
             />
@@ -93,7 +93,7 @@ export const PokemonCard = memo(({
         {imageFailed && (
           <div className="pokemon-card__image-fallback">
             <img 
-              src="/src/assets/Silhouette.svg" 
+              src="/assets/Silhouette.svg" 
               alt="Pokemon" 
               className="pokemon-card__silhouette" 
             />

@@ -137,7 +137,7 @@ export const DetailPage = ({ pokemonId, onBack }: DetailPageProps) => {
         </div>
         <div className="detail-page__loading">
           <img
-            src="/src/assets/Silhouette.svg"
+            src="/assets/Silhouette.svg"
             alt="Loading Pokemon..."
             className="detail-page__loading-silhouette"
           />
