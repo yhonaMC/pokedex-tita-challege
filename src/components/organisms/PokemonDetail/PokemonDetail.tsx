@@ -9,8 +9,7 @@ import {
   formatWeight,
   getTypeColor,
   capitalizeFirstLetter,
-  getStatAbbreviation,
-  getStatColor
+  getStatAbbreviation
 } from '../../../utils/pokemonUtils'
 import './PokemonDetail.css'
 
@@ -48,7 +47,13 @@ export const PokemonDetail = ({
                 className="pokemon-detail__back-button"
                 aria-label="Go back"
               >
-                <img src="/src/assets/Vector.svg" alt="Back" width="24" height="24" style={{ filter: 'brightness(0) invert(1)' }} />
+                <img
+                  src="/src/assets/Vector.svg"
+                  alt="Back"
+                  width="24"
+                  height="24"
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
               </button>
             )}
             <h1 className="pokemon-detail__name">

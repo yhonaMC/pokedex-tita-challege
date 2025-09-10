@@ -1,60 +1,62 @@
-import { useState, useRef, useEffect } from 'react';
-import { Button } from '../../atoms/Button';
-import { Icon } from '../../atoms/Icon';
-import './SortDropdown.css';
+import { useState, useRef, useEffect } from 'react'
+import './SortDropdown.css'
 
-export type SortOption = 'name' | 'number';
+export type SortOption = 'name' | 'number'
 
 export interface SortDropdownProps {
-  selectedSort: SortOption;
-  onSortSelect?: (sort: SortOption) => void;
+  selectedSort: SortOption
+  onSortSelect?: (sort: SortOption) => void
 }
 
 const sortOptions: { value: SortOption; label: string }[] = [
   { value: 'number', label: 'Number' },
-  { value: 'name', label: 'Name' },
-];
+  { value: 'name', label: 'Name' }
+]
 
 export const SortDropdown = ({
   selectedSort,
   onSortSelect
 }: SortDropdownProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false)
       }
-    };
+    }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
 
   const handleSortSelect = (sort: SortOption) => {
     if (onSortSelect) {
-      onSortSelect(sort);
+      onSortSelect(sort)
     }
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
 
-  const selectedOption = sortOptions.find(option => option.value === selectedSort);
   const getSelectedIcon = () => {
     return (
-      <span style={{ 
-        fontSize: '18px', 
-        fontWeight: 'bold', 
-        color: '#1d1d1d',
-        lineHeight: 1
-      }}>
+      <span
+        style={{
+          fontSize: '18px',
+          fontWeight: 'bold',
+          color: '#1d1d1d',
+          lineHeight: 1
+        }}
+      >
         #
       </span>
-    );
-  };
+    )
+  }
 
   return (
     <div className="sort-dropdown" ref={dropdownRef}>
@@ -70,13 +72,10 @@ export const SortDropdown = ({
           <div className="sort-dropdown__header">
             <span className="sort-dropdown__title">Sort by:</span>
           </div>
-          
+
           <div className="sort-dropdown__options">
             {sortOptions.map((option) => (
-              <label
-                key={option.value}
-                className="sort-dropdown__option"
-              >
+              <label key={option.value} className="sort-dropdown__option">
                 <input
                   type="radio"
                   name="sort"
@@ -93,5 +92,5 @@ export const SortDropdown = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
